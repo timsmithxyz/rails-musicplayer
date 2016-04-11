@@ -11,3 +11,5 @@ The SQLite database should already be created here, but if it were not, simply r
 	rake db:seed
 
 The main page will be located at /artists on the rails server.
+
+All included music comes from freemusicarchive.org
