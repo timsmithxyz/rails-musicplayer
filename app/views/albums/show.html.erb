@@ -1,0 +1,23 @@
+<div class="header">
+  <div class="container">
+    <h1>Music Player</h1>
+  </div>
+</div>
+
+<div class="album">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <%= image_tag @album.image %>
+        <h2><%= @album.title %></h2>
+      </div>
+      <div class="cards row">
+      <% @songs.each do |s| %>
+      <div class="card col-xs-4">
+        <p><%= link_to s.title, song_path(s) %></p>
+      </div>
+      <% end %>
+    </div>
+    </div>
+  </div>
+</div>

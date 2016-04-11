@@ -1,0 +1,17 @@
+<div class="header">
+  <div class="container">
+    <!--logo stuff-->
+  </div>
+</div>
+
+<div class="album">
+  <div class="container">
+    <%= image_tag @album.image %>
+
+    <%= form_for(@album) do |f| %>
+      <%= f.text_field :title %>
+      <%= f.submit "Update", :class => "btn" %>
+    <% end %> 
+    
+  </div>
+</div> 

@@ -1,0 +1,27 @@
+<div class="header">
+  <div class="container">
+    <h1>Music Player</h1>
+  </div>
+</div>
+
+<div class="artists">
+  <div class="container">
+    <%= form_tag(artists_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Artists" %>
+      <%= submit_tag "Search" %>
+    <% end %>
+    <% if !@artists.present? %>
+      <p>There are no artists containing the term(s) <%= params[:search] %>.</p>  
+    <% end %>
+    <div class="cards row">
+    	<% @artists.each do |t| %>
+      <div class="card col-xs-4">
+        <%= image_tag t.image %>
+        <h2><%= t.name %></h2>
+        <p><%= t.bio %></p>
+        <%= link_to "Albums by this artist", artist_path(t) %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="header">
+  <div class="container">
+    <h1>Music Player</h1>
+  </div>
+</div>
+
+<div class="song">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <%= image_tag @song.album.image %>
+        <h2><%= @song.title %></h2>
+        <audio controls autoplay>
+          <source src= <%= @song.audio %> type="audio/mp3">
+        </audio>
+        <p>from <%= @song.album.title %> by <%= @song.album.artist.name %></p>
+      </div>
+    </div>
+  </div>
+</div>
