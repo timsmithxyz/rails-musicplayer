@@ -1,28 +1,13 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Music Player by Tim Smith
 
-Things you may want to cover:
+tested with ruby 2.1.2p95 and rails 4.1.8
 
-* Ruby version
+uses external gem Faker
 
-* System dependencies
+The SQLite database should already be created here, but if it were not, simply run:
+	rake db:migrate
+	rake db:seed
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+The main page will be located at /artists on the rails server.
